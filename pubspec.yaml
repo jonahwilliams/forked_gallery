@@ -20,10 +20,6 @@ dependencies:
   flutter_gallery_assets: ^1.0.2
   flutter_localized_locales: ^2.0.4
   flutter_staggered_grid_view: ^0.6.1
-  firebase_analytics: ^10.2.1
-  firebase_core: ^2.7.0
-  firebase_crashlytics: ^3.1.1
-  firebase_performance: ^0.9.0+14
   get_storage: ^2.1.1
   google_fonts: ^5.0.0
   intl: any # An exact version pin will be provided by the Flutter SDK
@@ -57,59 +53,49 @@ dev_dependencies:
 flutter:
   generate: true # Enables generation of localized strings from arb files
   uses-material-design: true
-  deferred-components:
-    - name: crane
-      libraries:
-        # Only one library from the loading unit is necessary.
-        - package:gallery/studies/crane/app.dart
-      assets:
-        - packages/flutter_gallery_assets/crane/destinations/eat_0.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_1.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_2.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_3.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_4.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_5.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_6.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_7.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_8.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_9.jpg
-        - packages/flutter_gallery_assets/crane/destinations/eat_10.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_0.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_1.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_2.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_3.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_4.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_5.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_6.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_7.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_8.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_9.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_10.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_11.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_12.jpg
-        - packages/flutter_gallery_assets/crane/destinations/fly_13.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_0.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_1.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_2.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_3.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_4.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_5.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_6.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_7.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_8.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_9.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_10.jpg
-        - packages/flutter_gallery_assets/crane/destinations/sleep_11.jpg
-        - packages/flutter_gallery_assets/crane/logo/logo.png
-        - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-Medium.ttf
-        - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-SemiBold.ttf
-        - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-Regular.ttf
-        - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-Light.ttf
-  fonts:
-    - family: GalleryIcons
-      fonts:
-        - asset: packages/flutter_gallery_assets/fonts/GalleryIcons.ttf
   assets:
+    - packages/flutter_gallery_assets/crane/destinations/eat_0.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_1.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_2.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_3.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_4.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_5.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_6.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_7.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_8.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_9.jpg
+    - packages/flutter_gallery_assets/crane/destinations/eat_10.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_0.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_1.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_2.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_3.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_4.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_5.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_6.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_7.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_8.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_9.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_10.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_11.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_12.jpg
+    - packages/flutter_gallery_assets/crane/destinations/fly_13.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_0.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_1.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_2.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_3.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_4.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_5.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_6.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_7.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_8.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_9.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_10.jpg
+    - packages/flutter_gallery_assets/crane/destinations/sleep_11.jpg
+    - packages/flutter_gallery_assets/crane/logo/logo.png
+    - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-Medium.ttf
+    - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-SemiBold.ttf
+    - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-Regular.ttf
+    - packages/flutter_gallery_assets/fonts/google_fonts/Raleway-Light.ttf
     - packages/flutter_gallery_assets/assets/studies/shrine_card_dark.png
     - packages/flutter_gallery_assets/assets/studies/starter_card.png
     - packages/flutter_gallery_assets/assets/studies/starter_card_dark.png
@@ -261,3 +247,7 @@ flutter:
     - packages/shrine_images/35-0.jpg
     - packages/shrine_images/36-0.jpg
     - packages/shrine_images/37-0.jpg
+fonts:
+- family: GalleryIcons
+  fonts:
+    - asset: packages/flutter_gallery_assets/fonts/GalleryIcons.ttf

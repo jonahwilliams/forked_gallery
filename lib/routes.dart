@@ -5,19 +5,18 @@
 import 'package:dual_screen/dual_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gallery/deferred_widget.dart';
 import 'package:gallery/main.dart';
 import 'package:gallery/pages/demo.dart';
 import 'package:gallery/pages/home.dart';
-import 'package:gallery/studies/crane/app.dart' deferred as crane;
+import 'package:gallery/studies/crane/app.dart' as crane;
 import 'package:gallery/studies/crane/routes.dart' as crane_routes;
-import 'package:gallery/studies/fortnightly/app.dart' deferred as fortnightly;
+import 'package:gallery/studies/fortnightly/app.dart' as fortnightly;
 import 'package:gallery/studies/fortnightly/routes.dart' as fortnightly_routes;
-import 'package:gallery/studies/rally/app.dart' deferred as rally;
+import 'package:gallery/studies/rally/app.dart' as rally;
 import 'package:gallery/studies/rally/routes.dart' as rally_routes;
 import 'package:gallery/studies/reply/app.dart' as reply;
 import 'package:gallery/studies/reply/routes.dart' as reply_routes;
-import 'package:gallery/studies/shrine/app.dart' deferred as shrine;
+import 'package:gallery/studies/shrine/app.dart' as shrine;
 import 'package:gallery/studies/shrine/routes.dart' as shrine_routes;
 import 'package:gallery/studies/starter/app.dart' as starter_app;
 import 'package:gallery/studies/starter/routes.dart' as starter_app_routes;
@@ -60,36 +59,29 @@ class RouteConfiguration {
     ),
     Path(
       r'^' + rally_routes.homeRoute,
-      (context, match) => StudyWrapper(
-        study: DeferredWidget(rally.loadLibrary,
-            () => rally.RallyApp()), // ignore: prefer_const_constructors
+      (context, match) => const StudyWrapper(
+        study: rally.RallyApp(),
       ),
       openInSecondScreen: true,
     ),
     Path(
       r'^' + shrine_routes.homeRoute,
-      (context, match) => StudyWrapper(
-        study: DeferredWidget(shrine.loadLibrary,
-            () => shrine.ShrineApp()), // ignore: prefer_const_constructors
+      (context, match) => const StudyWrapper(
+        study:  shrine.ShrineApp(),
       ),
       openInSecondScreen: true,
     ),
     Path(
       r'^' + crane_routes.defaultRoute,
-      (context, match) => StudyWrapper(
-        study: DeferredWidget(crane.loadLibrary,
-            () => crane.CraneApp(), // ignore: prefer_const_constructors
-            placeholder: const DeferredLoadingPlaceholder(name: 'Crane')),
+      (context, match) => const StudyWrapper(
+        study: crane.CraneApp(),
       ),
       openInSecondScreen: true,
     ),
     Path(
       r'^' + fortnightly_routes.defaultRoute,
-      (context, match) => StudyWrapper(
-        study: DeferredWidget(
-            fortnightly.loadLibrary,
-            // ignore: prefer_const_constructors
-            () => fortnightly.FortnightlyApp()),
+      (context, match) => const StudyWrapper(
+        study: fortnightly.FortnightlyApp(),
       ),
       openInSecondScreen: true,
     ),
